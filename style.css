@@ -1,0 +1,99 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Segoe UI", sans-serif;
+}
+
+body {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: radial-gradient(circle at top, #1e1e2f, #0a0a12);
+}
+
+/* Calculator body */
+.calculator {
+    width: 320px;
+    padding: 20px;
+    border-radius: 20px;
+    background: rgba(255, 255, 255, 0.08);
+    backdrop-filter: blur(20px);
+    box-shadow:
+        0 0 20px rgba(0, 255, 255, 0.2),
+        0 0 60px rgba(0, 140, 255, 0.15);
+}
+
+/* Display */
+#display {
+    width: 100%;
+    height: 70px;
+    border-radius: 12px;
+    border: none;
+    outline: none;
+    text-align: right;
+    padding: 15px;
+    font-size: 2rem;
+    color: #fff;
+    background: rgba(0, 0, 0, 0.4);
+    box-shadow: inset 0 0 10px rgba(0, 255, 255, 0.3);
+    margin-bottom: 15px;
+}
+
+/* Buttons grid */
+.buttons {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 12px;
+}
+
+/* Buttons */
+button {
+    height: 60px;
+    border-radius: 14px;
+    border: none;
+    font-size: 1.3rem;
+    font-weight: 600;
+    cursor: pointer;
+    color: #fff;
+    background: rgba(255, 255, 255, 0.12);
+    box-shadow:
+        0 0 10px rgba(0, 255, 255, 0.2),
+        inset 0 0 10px rgba(255, 255, 255, 0.05);
+    transition: all 0.25s ease;
+}
+
+button:hover {
+    transform: scale(1.05);
+    box-shadow:
+        0 0 20px rgba(0, 255, 255, 0.6),
+        inset 0 0 10px rgba(255, 255, 255, 0.15);
+}
+
+/* Operator buttons */
+.orange {
+    background: linear-gradient(135deg, #ff9800, #ff5722);
+    box-shadow: 0 0 15px rgba(255, 152, 0, 0.6);
+}
+
+.orange:hover {
+    box-shadow: 0 0 25px rgba(255, 152, 0, 1);
+}
+
+/* Responsive */
+@media (max-width: 400px) {
+    .calculator {
+        width: 95%;
+    }
+
+    button {
+        height: 55px;
+        font-size: 1.1rem;
+    }
+
+    #display {
+        height: 60px;
+        font-size: 1.7rem;
+    }
+}
